@@ -11,7 +11,7 @@ public class move : MonoBehaviour {
     // Use this for initialization
     void Start () {
         
-        player.position = new Vector3(0, 0, 0);
+      
         juping = gameObject.GetComponent<Rigidbody2D>();
 
 
