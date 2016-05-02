@@ -20,16 +20,10 @@ public class move : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKey(KeyCode.D)) {
-            player.position += new Vector3(speed, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            player.position += new Vector3(-speed, 0, 0);
-        }
-        
-        
-        
+
+        float h = Input.GetAxis("Horizontal");
+        juping.AddForce((Vector2.right * speed) * h);
+      
         if (Input.GetButtonDown("Jump")) { 
 
             juping.AddForce(Vector2.up * jumping);
